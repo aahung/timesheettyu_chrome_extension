@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>TimeSheettyU</title>
+		<script src='jquery.min.js'></script>
+		<script src='class.js'></script>
+		<script src='qrcode.min.js'></script>
+		<script src='prune.js'></script>
+		<script src='popup.js'></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="bootstrap-theme.css">
+		<style type="text/css">
+			html, body {
+				width: 600px;
+				height: auto;
+				min-height: 600px;
+			}
+			#qrcode img{
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>TimeSheettyU</h1>
+			<div id='message'></div>
+			<div class="row text-center" id="stepOne" style="display: none">
+				<div class="col-sm-12" id="course_table">
+					<h3>Let's check your course!</h3>
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>Course Name</th>
+								<th><input id = "toggleAllCheckbox" type="checkbox" checked> Reminder</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody id="course_rows">
+							
+						</tbody>
+					</table>
+					<button id="editedBtn" type="submit" class="btn btn-default">Next</button>
+					<p><b>***If you didn't change the default reminder setting, you will receive reminder 1 hour before each class.***</b></p>
+				</div>
+			</div>
+			<div class="row" id="stepTwo" style="display: none">
+				<h3>Congratulation, you can scan the QR Code to finish it.</h3>
+				<div id="QR" class="col-sm-12 text-center">
+				<label>QR Code:</label>
+				<div class="text-center" id="qrcode" style="margin: auto"></div>
+				<br />
+				<p>Thank you for using it. </p>
+			</div>
+		</div>
+		<div class="text-center">
+			<small><a id="ideatime" href="#">ideati.me</a></small>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "TimeSheettyU",
+  "description": "a chrome extension to export curriculum schedule from CityU AIMS to .ics files",
+  "version": "0.1",
+  "icons": { 
+    "16": "images/logo16.png",
+    "48": "images/logo48.png",
+    "128": "images/logo128.png" 
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions" : [
+    "tabs",
+    "https://banweb.cityu.edu.hk/pls/PROD/*",
+    "http://timesheettyu.ideati.me/*"
+  ], 
+  "page_action": {
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    },
+    "default_title": "TimeSheettyU",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
